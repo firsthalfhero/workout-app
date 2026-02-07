@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Hip Flexor Stretch",
+    "sets": [30, 30, 30]
+  },
+  {
+    "name": "Cat-Cow Stretch",
+    "sets": [10, 10, 10]
+  },
+  {
+    "name": "Glute Bridge",
+    "sets": [15, 15, 15]
+  },
+  {
+    "name": "Dead Bug",
+    "sets": [12, 12]
+  },
+  {
+    "name": "Bird Dog",
+    "sets": [10, 10, 10]
+  }
+]

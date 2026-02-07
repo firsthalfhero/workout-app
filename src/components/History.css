@@ -1,0 +1,161 @@
+.history-container {
+  flex: 1;
+  padding: 0.75rem;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.history-loading,
+.history-error {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+.history-error {
+  color: #d32f2f;
+}
+
+.history-empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: #666;
+}
+
+.history-empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.history-empty h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.history-empty p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.workout-log-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
+}
+
+.workout-log-card:active {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.workout-log-header {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.workout-log-date {
+  font-size: 0.9rem;
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.workout-log-exercises {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.workout-log-exercise {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.workout-log-exercise-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.workout-log-sets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.workout-log-set {
+  background: #f8f9fa;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  border: 1px solid #e0e0e0;
+  min-width: 44px;
+  text-align: center;
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .history-container {
+    padding: 1.5rem;
+  }
+
+  .workout-log-card {
+    padding: 1.25rem;
+  }
+
+  .workout-log-date {
+    font-size: 1rem;
+  }
+
+  .workout-log-exercise-name {
+    font-size: 1.1rem;
+  }
+
+  .workout-log-set {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .history-empty {
+    padding: 4rem 2rem;
+  }
+
+  .history-empty h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 360px) {
+  .history-container {
+    padding: 0.5rem;
+  }
+
+  .workout-log-card {
+    padding: 0.75rem;
+  }
+
+  .workout-log-exercise-name {
+    font-size: 0.95rem;
+  }
+
+  .workout-log-set {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.6rem;
+    min-width: 40px;
+  }
+}
