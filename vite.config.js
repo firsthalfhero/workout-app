@@ -41,15 +41,22 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/api\.emailjs\.com\/.*/i,
+            // Cache Supabase REST API calls with NetworkFirst
+            urlPattern: /^https:\/\/dapcrfsbpynvlhrtkrfa\.supabase\.co\/rest\/.*/i,
             handler: 'NetworkFirst',
             options: {
-              cacheName: 'emailjs-cache',
+              cacheName: 'supabase-api-cache',
               expiration: {
-                maxEntries: 10,
+                maxEntries: 50,
                 maxAgeSeconds: 60 * 60 * 24 // 24 hours
-              }
+              },
+              networkTimeoutSeconds: 10
             }
+          },
+          {
+            // Never cache auth endpoints (security)
+            urlPattern: /^https:\/\/dapcrfsbpynvlhrtkrfa\.supabase\.co\/auth\/.*/i,
+            handler: 'NetworkOnly'
           }
         ]
       }
